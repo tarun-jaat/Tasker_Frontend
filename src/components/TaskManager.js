@@ -14,7 +14,7 @@ const TaskManager = () => {
 
     const fetchTasks = async () => {
         try {
-            const response = await fetch('http://localhost:3000/');
+            const response = await fetch('https://tasker-backed.onrender.com/');
             if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
             console.log('Fetched tasks:', data);
@@ -26,7 +26,7 @@ const TaskManager = () => {
 
     const addTask = async (task) => {
         try {
-            const response = await fetch('http://localhost:3000/save', {
+            const response = await fetch('https://tasker-backed.onrender.com/save', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const TaskManager = () => {
 
     const updateTask = async (id, updatedTask) => {
         try {
-            const response = await fetch('http://localhost:3000/update', {
+            const response = await fetch('https://tasker-backed.onrender.com/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const TaskManager = () => {
 
     const deleteTask = async (id) => {
         try {
-            await fetch('http://localhost:3000/delete', {
+            await fetch('https://tasker-backed.onrender.com/delete', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ const TaskManager = () => {
     const completeTask = async (id) => {
         try {
             const taskToComplete = tasks.find(task => task._id === id);
-            await fetch('http://localhost:3000/update', {
+            await fetch('https://tasker-backed.onrender.com/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
