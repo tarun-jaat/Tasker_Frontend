@@ -1,0 +1,81 @@
+.task-manager {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.task-manager-title {
+    font-family: 'Cursive';
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 100%; /* Ensure width does not change */
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-title {
+    cursor: pointer;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.complete-button, .edit-button, .delete-button {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.complete-button:hover, .edit-button:hover, .delete-button:hover {
+    background-color: #555;
+}
+
+.task-details {
+    margin-top: 10px;
+    text-align: left;
+    overflow: hidden; /* Hide overflow text */
+    max-height: 4em; /* Limit height initially */
+}
+
+.task-details p {
+    margin: 0;
+}
+
+.task-details button {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.task-details.expanded {
+    max-height: none; /* Allow full height when expanded */
+}
+
+.task-details small {
+    color: #ccc;
+}
